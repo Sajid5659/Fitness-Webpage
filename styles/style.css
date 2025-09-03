@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* *{
+    margin: 0 auto;
+    /* background:#141414; */
+} */
+/* shared styles */
+.inter-text {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.display-flex{
+    display: flex;
+}
+body{
+    background:#141414;
+}
+/* nav styles */
+.navigation{
+    margin: 0 auto;
+    margin-top: 58.5px;
+    width: 1060px;
+height: 46px;
+    /* margin-left: 190px; */
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    color: antiquewhite;
+}
+.nav-title{
+    margin-right: 678px;
+}
+.navbar{
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+/* hero styles */
+.hero{
+    margin: 0px auto;
+    margin-top: 96px;
+    /* margin-bottom: 28px; */
+    /* margin-top: 96px;
+    margin-bottom: 28px;
+    margin-left: 190px;
+    margin-right: 140px; */
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+}
+.hero-title{
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 78px;
+    font-weight: 400;
+    line-height: 94px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.hero-text-button{
+    margin-right: 100px;
+}
+.hero-title-description{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin: 28px auto;
+}
+.btn-primary{
+   justify-content: flex-start;
+   margin-left: 0;
+}
+.btn-1{
+    border-radius: 42px;
+    background: rgba(230, 83, 60, 1);
+    padding: 16px 40px 16px 40px;
+}
+.btn-2{
+    background: black;
+    border-radius: 42px;
+    padding: 16px 30px 16px 30px;
+    color: antiquewhite;
+}
+.hero-img>img{
+    width: 349px;
+    /* height: 580px; */
+}
+.img-card1{
+    width: 193px;
+    text-align: center;
+    margin-top: -400px;
+    margin-right: 0px;
+    /* padding: 25px; */
+    height: 98px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background:rgba(255, 255, 255, 0.1)
+}
+.card-head{
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 600;
+}
+.card-description{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 400;
+    /* text-align: center; */
+}
+.img-card2{
+    width: 193px;
+    /* padding: 20px; */
+    text-align: center;
+    margin-top: 100px;
+    margin-left: -80px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background:rgba(255, 255, 255, 0.1)
+}
+/* habits styles */
+.habit{
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 1044px;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.section-title{
+    color: rgba(255, 255, 255, 1);
+font-family: Inter;
+font-size: 48px;
+font-weight: 900;
+line-height: 58px;
+letter-spacing: 0%;
+text-align: center;
+margin-bottom: 14px;
+}
+.section-description{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    margin-bottom: 58px;
+}
+.img-title{
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.img-description{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    /* margin-right: 40px; */
+}
+.card{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* motivation styles */
+.motivation{
+    width: 1060px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(2,1fr);
+}
+.motivation-img>img{
+    width: 100%;
+}
+.motivation-sec>.section-title{
+    text-align: left;
+    margin-left: 34px;
+}
+.motivation-sec>.section-description{
+    text-align: left;
+    margin-left: 34px;
+}
+.motivation-sec>a>.btn-1{
+    margin-left: 34px;
+}
+/* responsive styles */
+@media screen and (max-width: 576px ){
+    .navbar li{
+        display: none;
+
+    }
+    .hero, .card-container, .motivation{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .hero-img{
+        margin-left: 50px;
+    }
+    .habit{
+        width: 250px;
+    }
+    .section-title, .section-description{
+        text-align: center;
+    }
+    .motivation{
+        width: 100%;
+        text-align: left;
+    }
+    .motivation-img>img{
+    width: 400px;
+    height: 550px;
+    }
+    .motivation-sec>.section-title{
+        margin-left: 0;
+    }
+    .motivation-sec>.section-description{
+        margin-left: 0;
+    }
+}
