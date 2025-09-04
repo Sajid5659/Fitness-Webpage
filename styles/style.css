@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-/* *{
-    margin: 0 auto;
+*{
+    margin: 0;
+    padding: 0;
     /* background:#141414; */
-} */
+}
 /* shared styles */
 .inter-text {
   font-family: "Inter", sans-serif;
@@ -20,26 +21,52 @@ body{
 .navigation{
     margin: 0 auto;
     margin-top: 58.5px;
-    width: 1060px;
-height: 46px;
+    max-width: 1060px;
+    height: 46px;
     /* margin-left: 190px; */
 }
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; 
-    color: antiquewhite;
+.primary-button {
+    border-radius: 46px;
+    background: rgba(230, 83, 60, 1);
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 8px 20px;
+    border: none;
+    color: white;
 }
-.nav-title{
-    margin-right: 678px;
-}
-.navbar{
-    display: flex;
-    list-style: none;
-    justify-content: flex-start;
+.navbar {
+
+    /* padding: 60px 190px; */
+    padding: 60px 0px;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+}
+.navbar-title{
+    color: rgba(230, 83, 60, 1);
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 44px;
+}
+.nav-menus {
+    align-items: center;
+    font-family: Inter;
+    gap: 47px;
+    padding: 5px 20px 5px 5px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-menu {
+    list-style: none;
+
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.125rem;
 }
 /* hero styles */
 .hero{
@@ -95,17 +122,29 @@ nav{
     width: 349px;
     /* height: 580px; */
 }
-.img-card1{
-    width: 193px;
-    text-align: center;
-    margin-top: -400px;
-    margin-right: 0px;
-    /* padding: 25px; */
-    height: 98px;
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    background:rgba(255, 255, 255, 0.1)
+.img-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 12px; */
+    /* padding: 10px 15px; */
+    height: 100px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+}
+#card1 {
+    position: relative;
+    top: -440px;
+    right: -190px;
+}
+#card2 {
+    position: relative;
+    top: -300px;
+    right: 100px;
 }
 .card-head{
     color: rgba(255, 255, 255, 1);
@@ -120,23 +159,12 @@ nav{
     font-weight: 400;
     /* text-align: center; */
 }
-.img-card2{
-    width: 193px;
-    /* padding: 20px; */
-    text-align: center;
-    margin-top: 100px;
-    margin-left: -80px;
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    background:rgba(255, 255, 255, 0.1)
-}
 /* habits styles */
 .habit{
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 100px;
-    width: 1044px;
+    max-width: 1044px;
 }
 .card-container{
     display: grid;
@@ -187,38 +215,194 @@ margin-bottom: 14px;
     justify-content: center;
 }
 /* motivation styles */
-.motivation{
-    width: 1060px;
-    display: grid;
+.motivation-card{
+    border-radius: 16px;
     margin: 0 auto;
-    grid-template-columns: repeat(2,1fr);
+    padding: 30px;
+    max-width: 1044px;
+    background-color:rgba(34, 34, 34, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 165px;
 }
-.motivation-img>img{
-    width: 100%;
+ .motivation-card img{
+    border-radius: 16px;
+     width: 380px;
+     height: 330px;  
+     object-position: 67% 30%;
+     object-fit: none;
+ }
+.motivation-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
 }
-.motivation-sec>.section-title{
+ .motivation-content .section-title{
+    font-size: 3.5rem;
     text-align: left;
-    margin-left: 34px;
 }
-.motivation-sec>.section-description{
+.motivation-content .section-description{
+    margin-bottom: 32px;
     text-align: left;
-    margin-left: 34px;
+ }
+ /* Bmi styles */
+ .bmi-calculator{
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    max-width: 1044px;
+    margin-top: 63px;
+ }
+ .bmi-content>.section-title{
+    text-align: center;
+ }
+ .calculator>.section-title{
+    font-size: 28px;
+ }
+.table-wrap{overflow:auto}
+.bmi__table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  min-width:420px;
+  font-family: Inter;
+  font-size:15px;
 }
-.motivation-sec>a>.btn-1{
-    margin-left: 34px;
+.bmi__table thead th{
+  text-align:left;
+  padding:12px 14px;
+  color:white;
+  background:rgba(255,255,255,0.04);
+  border-bottom:1px solid var(--stroke);
+  position:sticky; top:0;
+}
+.bmi__table tbody td{
+  padding:12px 14px;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom:1px solid var(--stroke);
+}
+/* .bmi__table tr:last-child td{border-bottom:none} */
+
+ /* team styles */
+ .my-team{
+    margin-top: 88px;
+    margin-bottom: 88px;
+ }
+ .team-content{
+    margin-bottom: 58px;
+ }
+.team-member{
+    max-width: 1044px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.member{
+    margin-bottom: 26px;
+}
+.member img{
+    width: 326.67px;
+    height: 272px;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.2);
+    /* margin-bottom: 30px; */
+}
+.member-name{
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.member-title{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.member-card{
+    margin-top: -60px;
+    margin-left: 20px;
+}
+/* footer styles */
+footer{
+    background: rgba(255, 255, 255, 0.1);
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 1044px;
+    margin: 0px auto;
+}
+/* .footer{
+    margin-top: 66px;
+} */
+.footer-title{
+    color: rgba(230, 83, 60, 1);
+    font-family: Inter;
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 85px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-right: 102px;
+    margin-bottom: 20px;
+}
+.footer-content>.section-description{
+    text-align: left;
+    /* margin-right: 102px; */
+}
+.footer-info, .footer-content{
+    margin-top: 66px;
+}
+.footer-info{
+    margin-left: 102px;
+}
+.footer-main-tag{
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 39px;
+}
+.footer-tag{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.copyright{
+    margin-top: 80px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 50px 0px 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 /* responsive styles */
 @media screen and (max-width: 576px ){
     .navbar li{
         display: none;
-
     }
-    .hero, .card-container, .motivation{
+    .hero, .card-container, .motivation-card, .team-member, .footer{
         display: grid;
         grid-template-columns: repeat(1,1fr);
+        /* margin: 0 auto; */
     }
     .hero-img{
-        margin-left: 50px;
+        margin-left: 30px;
     }
     .habit{
         width: 250px;
@@ -226,18 +410,22 @@ margin-bottom: 14px;
     .section-title, .section-description{
         text-align: center;
     }
-    .motivation{
+    /* .motivation{
         width: 100%;
         text-align: left;
-    }
-    .motivation-img>img{
-    width: 400px;
-    height: 550px;
-    }
+    } */
+    /* .motivation-img>img{
+        margin: 0;
+    width: 330px;
+    height: 400px;
+    } */
     .motivation-sec>.section-title{
         margin-left: 0;
     }
     .motivation-sec>.section-description{
         margin-left: 0;
+    }
+    .team-member{
+        margin-left: 10px;
     }
 }
