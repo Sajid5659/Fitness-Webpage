@@ -130,7 +130,7 @@ body{
     /* gap: 12px; */
     /* padding: 10px 15px; */
     height: 100px;
-    width: 200px;
+    max-width: 200px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgb(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -162,7 +162,7 @@ body{
 /* habits styles */
 .habit{
     margin: 0 auto;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     margin-bottom: 100px;
     max-width: 1044px;
 }
@@ -172,13 +172,13 @@ body{
 }
 .section-title{
     color: rgba(255, 255, 255, 1);
-font-family: Inter;
-font-size: 48px;
-font-weight: 900;
-line-height: 58px;
-letter-spacing: 0%;
-text-align: center;
-margin-bottom: 14px;
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 58px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 14px;
 }
 .section-description{
     color: rgba(255, 255, 255, 0.5);
@@ -247,17 +247,43 @@ margin-bottom: 14px;
     text-align: left;
  }
  /* Bmi styles */
- .bmi-calculator{
+ .bmi{
     background: rgba(255, 255, 255, 0.1);
     margin: 0 auto;
     max-width: 1044px;
     margin-top: 63px;
  }
+ .bmi-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+ }
  .bmi-content>.section-title{
     text-align: center;
  }
- .calculator>.section-title{
+ /* .calculator>.section-title{
     font-size: 28px;
+ } */
+ .bmi-card>.section-title{
+    text-align: left;
+    font-size: 28px;
+    font-weight: 900;
+ }
+  .bmi-card>.section-description{
+    text-align: left;
+ } 
+ .bmi-inputs input{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 12px 40px 12px 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+ }
+ .bmi-inputs{
+    margin-bottom: 10px;
+ }
+ .bmi-calculator>.btn-1{
+    color: white;
  }
 .table-wrap{overflow:auto}
 .bmi__table{
@@ -396,7 +422,7 @@ footer{
     .navbar li{
         display: none;
     }
-    .hero, .card-container, .motivation-card, .team-member, .footer{
+    .hero, .card-container, .motivation-card, .team-member, .footer,  .bmi-container{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         /* margin: 0 auto; */
